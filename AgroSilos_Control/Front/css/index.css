@@ -1,0 +1,43 @@
+ /* Banner */
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #f8f8f8, #e0ffe5);
+  padding: 60px 80px;
+  min-height: 250px;
+}
+
+.banner-left h1 {
+  font-size: 60px;
+  color: #222;
+  font-weight: bold;
+}
+
+.banner-left h1 span {
+  color: #004d26; /* Verde corporativo */
+}
+
+.banner-right {
+  text-align: right;
+}
+
+.banner-right h2 {
+  font-size: 28px;
+  color: #004d26;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #00a84f; /* Verde botón */
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #007a38;
+}
