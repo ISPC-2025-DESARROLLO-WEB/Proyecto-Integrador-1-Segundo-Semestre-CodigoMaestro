@@ -28,8 +28,6 @@ AgroSilosControl/
 
 👩‍💻 Pablo Lihuen Romero (Developer)
 
-👨‍💻 Claudia  Mariela Mansilla (Developer)
-
 👨‍💻 Guadalupe Magali Turri sánchez (Developer)
 
 👨‍💻 Franco Daniel Gimenez Benitez (Developer)
