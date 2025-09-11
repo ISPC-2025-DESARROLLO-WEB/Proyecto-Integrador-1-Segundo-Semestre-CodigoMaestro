@@ -33,18 +33,88 @@
     <div class="col-md-7">
       <h2 class="mb-4">Envíanos un mensaje</h2>
       <form>
+        <h4 class="mb-3">Datos de la Empresa/Productor</h4>
+
         <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre completo</label>
-          <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+          <label for="empresa" class="form-label">Nombre de la Empresa/Productor</label>
+          <input type="text" class="form-control" id="empresa" placeholder="Nombre de la Empresa/Productor" maxlength="50" required>
         </div>
+
+        <div class="mb-3">
+          <label for="dni" class="form-label">DNI/CUIT</label>
+          <input type="text" class="form-control" id="dni" placeholder="DNI/CUIT" maxlength="50" required>
+        </div>
+
         <div class="mb-3">
           <label for="email" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" id="email" placeholder="ejemplo@mail.com">
+          <input type="email" class="form-control" id="email" placeholder="ejemplo@mail.com" maxlength="50" required>
         </div>
+
         <div class="mb-3">
-          <label for="mensaje" class="form-label">Mensaje</label>
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input type="text" class="form-control" id="telefono" placeholder="Teléfono" maxlength="50" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="codigo" class="form-label">Código Postal</label>
+          <input type="text" class="form-control" id="codigo" placeholder="Código Postal" maxlength="50" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="direccion" class="form-label">Dirección Completa</label>
+          <input type="text" class="form-control" id="direccion" placeholder="Dirección Completa" maxlength="50" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="ciudad" class="form-label">Ciudad</label>
+          <input type="text" class="form-control" id="ciudad" placeholder="Ciudad" maxlength="50" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="provincia" class="form-label">Provincia</label>
+          <select class="form-select" id="provincia" required>
+            <option value="" hidden selected>Seleccionar Provincia</option>
+            <option value="buenosaires">Buenos Aires</option>
+            <option value="catamarca">Catamarca</option>
+            <option value="chaco">Chaco</option>
+            <option value="chubut">Chubut</option>
+            <option value="cordoba">Córdoba</option>
+            <option value="corrientes">Corrientes</option>
+            <option value="entrerios">Entre Ríos</option>
+            <option value="formosa">Formosa</option>
+            <option value="jujuy">Jujuy</option>
+            <option value="lapampa">La Pampa</option>
+            <option value="larioja">La Rioja</option>
+            <option value="mendoza">Mendoza</option>
+            <option value="misiones">Misiones</option>
+            <option value="neuquen">Neuquén</option>
+            <option value="rionegro">Río Negro</option>
+            <option value="salta">Salta</option>
+            <option value="sanjuan">San Juan</option>
+            <option value="sanluis">San Luis</option>
+            <option value="santacruz">Santa Cruz</option>
+            <option value="santafe">Santa Fe</option>
+            <option value="santiagodelestero">Santiago del Estero</option>
+            <option value="tierradelfuego">Tierra del Fuego</option>
+            <option value="tucuman">Tucumán</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="condicion" class="form-label">Condición Comercial</label>
+          <select class="form-select" id="condicion">
+            <option value="" hidden selected>Seleccionar Condición</option>
+            <option value="responsableinscripto">Responsable Inscripto</option>
+            <option value="monotributo">Monotributo</option>
+            <option value="excento">Exento</option>
+          </select>
+        </div>
+
+        <h4 class="mb-3">Comentarios Adicionales</h4>
+        <div class="mb-3">
           <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
         </div>
+
         <button type="submit" class="btn btn-success px-4">Enviar</button>
       </form>
     </div>
@@ -53,7 +123,7 @@
     <div class="col-md-5">
       <h2 class="mb-4">Nuestros datos</h2>
       <ul class="list-unstyled">
-        <li><strong>📍 Dirección:</strong> Av.Yrigoyen  1073, Córdoba, Argentina</li>
+        <li><strong>📍 Dirección:</strong> Av.Yrigoyen 1073, Córdoba, Argentina</li>
         <li><strong>📞 Teléfono:</strong> +54 3547662065</li>
         <li><strong>✉️ Email:</strong> contacto@agrosilos.com</li>
       </ul>
