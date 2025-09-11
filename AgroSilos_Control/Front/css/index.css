@@ -53,7 +53,7 @@
  
  
  /*Carrusel*/
-.conteiner-carrusel {
+.container-carrusel {
     width: 40%;
     padding: 10px 0;
     margin: 0 auto; /* centra horizontalmente */
@@ -90,7 +90,7 @@
   margin-bottom: 20px;
 }
 
-.btn {
+.btn-agro {
   background-color: #00a84f; /* Verde botón */
   color: white;
   padding: 12px 25px;
@@ -100,6 +100,6 @@
   transition: 0.3s;
 }
 
-.btn:hover {
+.btn-agro:hover {
   background-color: #007a38;
 }
