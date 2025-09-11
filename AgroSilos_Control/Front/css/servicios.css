@@ -53,3 +53,39 @@
   }
 }
 
+/* Móviles */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin: 15px 0;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+
+  .card-title {
+    font-size: 15px;
+  }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .card-img-top {
+    height: 140px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+}

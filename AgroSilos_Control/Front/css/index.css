@@ -103,3 +103,98 @@
 .btn-agro:hover {
   background-color: #007a38;
 }
+
+
+
+/*     RESPONSIVE        */
+/* ===================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .quienes-somos h2 {
+    font-size: 28px;
+  }
+
+  .quienes-somos p {
+    font-size: 16px;
+  }
+
+  .container-carrusel {
+    width: 60%;
+  }
+
+  .banner {
+    padding: 40px 40px;
+  }
+
+  .banner-left h1 {
+    font-size: 42px;
+  }
+
+  .banner-right h2 {
+    font-size: 22px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .quienes-somos {
+    padding: 50px 15px;
+  }
+
+  .quienes-somos h2 {
+    font-size: 24px;
+  }
+
+  .quienes-somos p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .container-carrusel {
+    width: 90%;
+  }
+
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .banner-left h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .banner-right {
+    text-align: center;
+  }
+
+  .banner-right h2 {
+    font-size: 20px;
+  }
+
+  .btn-agro {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Teléfonos muy pequeños */
+@media (max-width: 480px) {
+  .banner-left h1 {
+    font-size: 26px;
+  }
+
+  .banner-right h2 {
+    font-size: 18px;
+  }
+
+  .btn-agro {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
