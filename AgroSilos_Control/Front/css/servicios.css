@@ -2,13 +2,36 @@
     width: 18rem;
     margin: 20px;
     border-radius: 10px; 
-    text-align: center;   
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
 }
 
 .card-container {
     display: flex;
     justify-content: center; 
     flex-wrap: wrap; 
-    gap: 20px; 
+    gap: 20px;
+    align-items: stretch;
 }
 
+.card-body {
+  flex: 1; /* 👈 hace que el contenido ocupe el espacio sobrante */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* título arriba, botón abajo */
+}
+
+.card-img-top {
+  height: 200px;       /* todas iguales en altura */
+  object-fit: contain; /* ajusta la imagen dentro sin deformarla */
+  padding: 10px;       /* opcional, para que no queden pegadas */
+}
+
+.card-title {
+  min-height: 3rem;  /* reserva espacio para 2 líneas de título */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
