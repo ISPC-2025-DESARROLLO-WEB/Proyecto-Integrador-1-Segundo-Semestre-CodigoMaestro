@@ -33,9 +33,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-}
+} 
+
 /*     RESPONSIVE        */
-/* ===================== */
+
 
 /* Tablets */
 @media (max-width: 992px) {
