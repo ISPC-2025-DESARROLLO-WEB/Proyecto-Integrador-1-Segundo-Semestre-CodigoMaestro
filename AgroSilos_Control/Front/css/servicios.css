@@ -53,6 +53,7 @@
   }
 }
 
+
 /* Móviles */
 @media (max-width: 768px) {
   .card-container {
@@ -89,3 +90,23 @@
     font-size: 14px;
   }
 }
+
+/*     RESPONSIVE        */
+
+
+/* Tablets */
+@media (max-width: 992px) {
+  .card {
+    width: 16rem;
+  }
+
+  .card-img-top {
+    height: 180px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+}
+
+
