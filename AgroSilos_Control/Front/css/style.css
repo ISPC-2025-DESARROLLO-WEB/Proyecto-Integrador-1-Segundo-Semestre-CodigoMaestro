@@ -73,3 +73,8 @@
       margin-top: 10px;
     }
   }
+
+  /* Scroll suave en toda la web */
+html {
+  scroll-behavior: smooth;
+}
