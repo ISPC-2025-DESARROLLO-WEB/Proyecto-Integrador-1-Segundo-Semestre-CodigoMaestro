@@ -105,7 +105,6 @@
 }
 
 /*     RESPONSIVE        */
-/* ===================== */
 
 /* Tablets */
 @media (max-width: 992px) {
@@ -179,7 +178,7 @@
   }
 }
 
-/* Teléfonos muy pequeños */
+/* Teléfonos chicos */
 @media (max-width: 480px) {
   .banner-left h1 {
     font-size: 26px;

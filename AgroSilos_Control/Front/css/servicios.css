@@ -35,8 +35,8 @@
   text-align: center;
 } 
 
-/*     RESPONSIVE        */
 
+/*     RESPONSIVE        */
 
 /* Tablets */
 @media (max-width: 992px) {
@@ -74,7 +74,7 @@
   }
 }
 
-/* Celulares pequeños */
+/* Celulares chicos */
 @media (max-width: 480px) {
   .card {
     width: 100%;
