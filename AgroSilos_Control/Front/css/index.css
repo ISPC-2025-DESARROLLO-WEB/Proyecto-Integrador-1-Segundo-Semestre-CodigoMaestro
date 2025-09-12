@@ -55,14 +55,14 @@
  /*Carrusel*/
 .carrusel-section {
   width: 100%;
-  height: 100vh; /* ocupa toda la pantalla */
+  height: 100vh; 
   overflow: hidden;
 }
 
 .carrusel-section img {
   width: 100%;
   height: 100vh;
-  object-fit: cover; /* ajusta la imagen sin deformarla */
+  object-fit: cover; 
 }
 
  
