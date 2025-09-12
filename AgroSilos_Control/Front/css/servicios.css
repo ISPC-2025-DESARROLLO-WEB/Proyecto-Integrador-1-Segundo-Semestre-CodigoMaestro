@@ -35,6 +35,52 @@
   text-align: center;
 }
 
+/* Secciones de detalle de productos */
+section[id^="det-"] {
+  background: #f9f9f9;          /* Fondo gris claro */
+  border-radius: 10px;          /* Bordes redondeados */
+  padding: 40px 30px;           /* Espaciado interno */
+  margin: 40px auto;            /* Separación entre secciones */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra sutil */
+  max-width: 900px;             /* No muy ancho */
+}
+
+/* Títulos de producto */
+section[id^="det-"] h2 {
+  color: #004d26;               /* Verde corporativo */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* Párrafos */
+section[id^="det-"] p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Listas */
+section[id^="det-"] ul {
+  list-style: none;
+  padding: 0;
+}
+
+section[id^="det-"] ul li {
+  background: url("../img/check-icon.png") no-repeat left center; /* iconito de check opcional */
+  background-size: 20px;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* Botones dentro de la sección */
+section[id^="det-"] a.btn {
+  margin-top: 15px;
+}
 
 /*     RESPONSIVE        */
 
