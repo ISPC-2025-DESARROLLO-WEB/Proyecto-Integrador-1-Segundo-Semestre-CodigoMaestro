@@ -23,8 +23,8 @@
   }
 
   .header-top img {
-    height: 120px;
-    width: 120px;
+    height: 220px;
+    width: auto;
   }
 
   /* Franja verde con menú */
@@ -32,7 +32,7 @@
     background-color: #004d26; /* Verde oscuro */
     display: flex;
     justify-content: center;
-    padding: 12px 0;
+    padding: 10px 0;
   }
 
   nav ul {
