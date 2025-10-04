@@ -51,85 +51,490 @@
   nav ul li a:hover {
     color: #ffcc00; /* Amarillo al pasar el mouse */
   }
+/*fin del header css*/
 
   /* Footer */
- .footer-container {
-    background-color: #f9e37c
-    padding: 40px 20px;
-    color: #1c472a; 
-    font-size: 14px;
-}
-
-.footer-main-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; 
-    gap: 20px;
-}
-
-.footer-column {
-    flex: 1; 
-    min-width: 200px; 
-    margin-bottom: 20px;
-}
-
-.footer-column h4 {
-    font-size: 16px;
-    font-weight: bold;
-    color: #004d26; /* Títulos en verde oscuro */
-    margin-bottom: 10px;
-}
-
-.footer-column p, .footer-column a {
+  .footer-container {
+    background-color: #f9e37c;
+    padding: 50px 25px;
     color: #1c472a;
-    text-decoration: none;
+    font-size: 14px;
     line-height: 1.6;
 }
 
+/* Sección principal */
+.footer-main-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+}
+
+/* Títulos */
+.footer-column h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #004d26;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.footer-column h4::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #004d26;
+    margin-top: 6px;
+    border-radius: 2px;
+}
+
+/* Texto y links */
+.footer-column p, 
+.footer-column a {
+    color: #1c472a;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    display: block;
+    margin-bottom: 6px;
+}
+
 .footer-column a:hover {
+    color: #004d26;
     text-decoration: underline;
 }
 
+/* Íconos sociales */
 .social-icons a {
     color: #1c472a;
-    font-size: 20px;
-    margin-right: 15px;
-    text-decoration: none;
+    font-size: 22px;
+    margin-right: 18px;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
+.social-icons a:hover {
+    color: #004d26;
+    transform: scale(1.1);
+}
+
+/* Línea inferior */
 .footer-bottom {
     border-top: 1px solid #c0d1c0;
     padding-top: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.footer-copyright {
-    line-height: 1.5;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-bottom .social-icons {
     margin-top: 10px;
 }
 
-/* Media Queries para responsividad */
+/* Copyright */
+.footer-copyright {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* Responsive  footer*/
 @media (max-width: 768px) {
     .footer-main-content {
         flex-direction: column;
+        align-items: flex-start;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+        gap: 15px;
+    }
+
+    .social-icons a {
+        margin-right: 12px;
     }
 }
-</footer>
-  
+/*fin del footer css*/
+ 
+/*servicios.css*/
+.card {
+    width: 18rem;
+    margin: 20px;
+    border-radius: 10px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+}
 
-  /* Responsive */
+.card-container {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 20px;
+    align-items: stretch;
+}
+
+.card-body {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.card-img-top {
+  height: 200px;       
+  object-fit: contain; 
+  padding: 10px;       
+}
+
+.card-title {
+  min-height: 3rem;  
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Secciones de detalle de productos */
+section[id^="det-"] {
+  background: #f9f9f9;          /* Fondo gris claro */
+  border-radius: 10px;          /* Bordes redondeados */
+  padding: 40px 30px;           /* Espaciado interno */
+  margin: 40px auto;            /* Separación entre secciones */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra sutil */
+  max-width: 900px;             /* No muy ancho */
+}
+
+/* Títulos de producto */
+section[id^="det-"] h2 {
+  color: #004d26;               /* Verde corporativo */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* Párrafos */
+section[id^="det-"] p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Listas */
+section[id^="det-"] ul {
+  list-style: none;
+  padding: 0;
+}
+
+section[id^="det-"] ul li {
+  background: url("../img/check-icon.png") no-repeat left center; /* iconito de check opcional */
+  background-size: 20px;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* Botones dentro de la sección */
+section[id^="det-"] a.btn {
+  margin-top: 15px;
+}
+
+/*     RESPONSIVE        */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .card {
+    width: 16rem;
+  }
+
+  .card-img-top {
+    height: 180px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+}
+
+
+/* Móviles */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin: 15px 0;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+
+  .card-title {
+    font-size: 15px;
+  }
+}
+
+/* Celulares chicos */
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .card-img-top {
+    height: 140px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+}
+
+/*     RESPONSIVE        */
+
+
+/* Tablets */
+@media (max-width: 992px) {
+  .card {
+    width: 16rem;
+  }
+
+  .card-img-top {
+    height: 180px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+}
+/*fin de css servicios*/
+
+
+/*index css*/
+/* Sección Quiénes Somos */
+.quienes-somos {
+  background: linear-gradient(135deg, #ffcc00, #5ca322);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.quienes-somos .container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.quienes-somos h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.quienes-somos h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: white;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.quienes-somos p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Animación suave */
+.quienes-somos p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.quienes-somos p:nth-child(2) { animation-delay: 0.3s; }
+.quienes-somos p:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+ 
+ 
+ /*Carrusel*/
+.carrusel-section {
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.carrusel-section img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; 
+}
+
+ 
+ /* Banner */
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #f8f8f8, #e0ffe5);
+  padding: 60px 80px;
+  min-height: 250px;
+}
+
+.banner-left h1 {
+  font-size: 60px;
+  color: #222;
+  font-weight: bold;
+}
+
+.banner-left h1 span {
+  color: #004d26; /* Verde corporativo */
+}
+
+.banner-right {
+  text-align: right;
+}
+
+.banner-right h2 {
+  font-size: 28px;
+  color: #004d26;
+  margin-bottom: 20px;
+}
+
+.btn-agro {
+  background-color: #00a84f; /* Verde botón */
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-agro:hover {
+  background-color: #007a38;
+}
+
+
+/*     RESPONSIVE        */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .quienes-somos h2 {
+    font-size: 28px;
+  }
+
+  .quienes-somos p {
+    font-size: 16px;
+  }
+
+  .container-carrusel {
+    width: 60%;
+  }
+
+  .banner {
+    padding: 40px 40px;
+  }
+
+  .banner-left h1 {
+    font-size: 42px;
+  }
+
+  .banner-right h2 {
+    font-size: 22px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .quienes-somos {
+    padding: 50px 15px;
+  }
+
+  .quienes-somos h2 {
+    font-size: 24px;
+  }
+
+  .quienes-somos p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .container-carrusel {
+    width: 90%;
+  }
+
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .banner-left h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .banner-right {
+    text-align: center;
+  }
+
+  .banner-right h2 {
+    font-size: 20px;
+  }
+
+  .btn-agro {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Teléfonos chicos */
+@media (max-width: 480px) {
+  .banner-left h1 {
+    font-size: 26px;
+  }
+
+  .banner-right h2 {
+    font-size: 18px;
+  }
+
+  .btn-agro {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/*fin de index css*/
+
+  /* Responsive general */
   @media (max-width: 768px) {
     header {
       flex-direction: column;
@@ -145,4 +550,24 @@
   /* Scroll suave en toda la web */
 html {
   scroll-behavior: smooth;
+}
+
+
+/*css de productos*/
+.btn-volver {
+  display: inline-block;
+  background-color: #004d26; /* Verde oscuro */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-volver:hover {
+  background-color: #ffcc00; /* Amarillo */
+  color: #004d26;
+  transform: scale(1.05);
+  text-decoration: none;
 }
