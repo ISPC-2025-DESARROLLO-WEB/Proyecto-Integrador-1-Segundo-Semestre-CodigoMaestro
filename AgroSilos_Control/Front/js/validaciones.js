@@ -1,6 +1,6 @@
 // Validación personalizada Bootstrap + envío simulado
 document.getElementById('contactoForm').addEventListener('submit', function(e) {
-  e.preventDefault(); // Evita el envío por defect
+  e.preventDefault(); // Evita el envío por defecto
   
   const form = e.target;
   
