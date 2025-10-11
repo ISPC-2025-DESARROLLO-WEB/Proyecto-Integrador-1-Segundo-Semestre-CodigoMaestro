@@ -53,6 +53,9 @@
   }
 /*fin del header css*/
 
+ .btn-Inicio a {
+    font-size: 1.2em;  
+}
   /* Footer */
   .footer-container {
     background-color: #f9e37c;
@@ -385,7 +388,6 @@ section[id^="det-"] a.btn {
  /*Carrusel*/
 .carrusel-section {
   width: 100%;
-  height: 100vh; 
   overflow: hidden;
 }
 

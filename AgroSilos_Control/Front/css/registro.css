@@ -1,0 +1,100 @@
+
+.main-content {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f7fb;
+  padding: 40px 0;
+}
+
+
+.form-registro {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+.form-registro h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #004d26;
+}
+
+.form-registro label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: #1c472a;
+}
+
+.form-registro input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-registro select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+.form-registro select:focus {
+  border-color: #004d26;
+  outline: none;
+}
+
+
+.form-registro input:focus {
+  border-color: #004d26;
+  outline: none;
+}
+
+.form-registro button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #004d26;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.form-registro button:hover {
+  background-color: #006837;
+}
+
+/* === MENSAJE DE ÉXITO === */
+.success-message {
+  display: none;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
