@@ -52,9 +52,12 @@
     color: #ffcc00; /* Amarillo al pasar el mouse */
   }
 
+ .btn-Inicio a {
+    font-size: 1.2em;  
+}
   /* Footer */
  .footer-container {
-    background-color: #f9e37c
+    background-color: #f9e37c;
     padding: 40px 20px;
     color: #1c472a; 
     font-size: 14px;
@@ -126,9 +129,8 @@
         text-align: center;
     }
 }
-</footer>
-  
 
+  
   /* Responsive */
   @media (max-width: 768px) {
     header {

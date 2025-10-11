@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/registro.css">
+    <title>Registro</title>
+</head>
+<body>
+<header>
+  <!-- Franja blanca con logo -->
+  <div class="header-top">
+    <img src="../img/Logo Empresa.png" alt="Logo Agro">
+  </div>
+
+   <!-- Menú -->
+  <div class="header-bottom">
+  <nav>
+    <ul>
+      <li class="btn-Inicio"><a href="./index.html">Inicio</a></li>
+      <li class="btn-Inicio"><a href="./servicios.html">Productos y servicios</a></li>
+      <li class="btn-Inicio"><a href="./quienesSomos.html">Quienes Somos</a></li>
+      <li class="btn-Inicio"><a href="./contacto.html">Contacto</a></li>
+      <li class="btn-Inicio"><a href="./registro.html">Registro</a></li>
+    </ul>
+  </nav>
+  </div>
+</nav>
+</header>
+
+    <section class="container py-5">
+  <div class="row g-5">
+
+    <!-- Formulario -->
+    <main class="main-content">
+        <form action="https://formspree.io/f/mjkaakjw" method="POST" class="form-registro">
+        <h2>Registro de Usuario</h2>
+
+        <label for="username">Nombre de usuario</label>
+        <input type="text" id="username" name="username" required minlength="4" placeholder="Ej. FrancoSantos">
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required placeholder="Ej. franco.santos@gmail.com">
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" required minlength="8" placeholder="Mínimo 8 caracteres">
+
+        <label for="fullname">Nombre completo</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Ej. Franco David Santos">
+
+        <label for="phone">Teléfono</label>
+        <input type="tel" id="phone" name="phone" placeholder="351536989">
+
+        <label for="birthdate">Fecha de nacimiento</label>
+        <input type="date" id="birthdate" name="birthdate">
+
+        <label for="address">Dirección</label>
+        <input type="text" id="address" name="address" placeholder="Ej. Calle Reforma 123">
+
+        <label for="province">Provincia</label>
+        <select id="province" name="province" required>
+            <option value="">Seleccione una provincia</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Catamarca">Catamarca</option>
+            <option value="Chaco">Chaco</option>
+            <option value="Chubut">Chubut</option>
+            <option value="Córdoba">Córdoba</option>
+            <option value="Corrientes">Corrientes</option>
+            <option value="Entre Ríos">Entre Ríos</option>
+            <option value="Formosa">Formosa</option>
+            <option value="Jujuy">Jujuy</option>
+            <option value="La Pampa">La Pampa</option>
+            <option value="La Rioja">La Rioja</option>
+            <option value="Mendoza">Mendoza</option>
+            <option value="Misiones">Misiones</option>
+            <option value="Neuquén">Neuquén</option>
+            <option value="Río Negro">Río Negro</option>
+            <option value="Salta">Salta</option>
+            <option value="San Juan">San Juan</option>
+            <option value="San Luis">San Luis</option>
+            <option value="Santa Cruz">Santa Cruz</option>
+            <option value="Santa Fe">Santa Fe</option>
+            <option value="Santiago del Estero">Santiago del Estero</option>
+            <option value="Tierra del Fuego">Tierra del Fuego</option>
+            <option value="Tucumán">Tucumán</option>
+        </select>
+
+        <p id="successMessage" class="success-message">Registro completado con éxito 🎉</p>
+
+        <button type="submit">Registrarse</button>
+        </form>
+    </main>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">&copy; 2025 AgroSilos Control - Todos los derechos reservados</p>
+</footer>
+</body>
+
+<script src="../js/validacionRegistro.js"></script>
+</html>

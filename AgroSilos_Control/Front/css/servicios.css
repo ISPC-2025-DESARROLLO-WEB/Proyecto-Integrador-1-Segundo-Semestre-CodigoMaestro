@@ -47,7 +47,7 @@ section[id^="det-"] {
 
 /* Títulos de producto */
 section[id^="det-"] h2 {
-  color: #004d26;               /* Verde corporativo */
+  color: #004d26;               
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
