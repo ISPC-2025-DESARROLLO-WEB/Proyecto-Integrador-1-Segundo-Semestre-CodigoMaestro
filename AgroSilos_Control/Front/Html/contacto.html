@@ -31,6 +31,12 @@
             <li class="nav-item"><a class="nav-link text-white" href="./index.html">Inicio</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="./servicios.html">Productos y servicios</a></li>
             <li class="nav-item"><a class="nav-link text-white active" aria-current="page" href="#">Contacto</a></li>
+            <!-- BOTÓN LOGIN -->
+            <li class="nav-item ms-lg-3">
+              <a href="./login.html" class="btn btn-login-nav">
+                <i class="fa-solid fa-user"></i> Iniciar sesión
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -54,7 +60,7 @@
 
         <div class="mb-3">
           <label for="dni" class="form-label">DNI/CUIT</label>
-          <input type="number" class="form-control" id="dni" placeholder="Ej: 20456789" min="1000000" max="99999999999" required>
+          <input type="number" class="form-control" id="dni" placeholder="Ej: 20456789" minlength="1000000" max="99999999999" required>
           <div class="invalid-feedback">Ingrese un número válido (sin puntos ni guiones).</div>
         </div>
 
