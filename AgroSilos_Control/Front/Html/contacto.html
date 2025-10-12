@@ -23,6 +23,12 @@
       <li class="btn-Inicio"><a href="./quienesSomos.html">Quienes Somos</a></li>
       <li class="btn-Inicio"><a href="./contacto.html">Contacto</a></li>
       <li class="btn-Inicio"><a href="./registro.html">Registro</a></li>
+      <!-- BOTÓN LOGIN -->
+            <li class="nav-item ms-lg-3">
+              <a href="./login.html" class="btn btn-login-nav">
+                <i class="fa-solid fa-user"></i> Iniciar sesión
+              </a>
+            </li>
     </ul>
   </nav>
   </div>
@@ -45,7 +51,7 @@
 
         <div class="mb-3">
           <label for="dni" class="form-label">DNI/CUIT</label>
-          <input type="number" class="form-control" id="dni" placeholder="Ej: 20456789" min="1000000" max="99999999999" required>
+          <input type="number" class="form-control" id="dni" placeholder="Ej: 20456789" minlength="1000000" max="99999999999" required>
           <div class="invalid-feedback">Ingrese un número válido (sin puntos ni guiones).</div>
         </div>
 
@@ -197,7 +203,6 @@
         </div>
     </div>
 </footer>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
  <script src="../js/validaciones.js"></script>
 </body>
 </html>

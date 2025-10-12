@@ -5,11 +5,11 @@ document.getElementById('contactoForm').addEventListener('submit', function(e) {
   const form = e.target;
   
   if (!form.checkValidity()) {
-    e.stopPropagation();
-    form.classList.add('was-validated');
+    e.stopPropagation(); // Detiene la propagación del evento.
+    form.classList.add('was-validated'); //Agrega la clase de Bootstrap para mostrar errores
   } else {
     alert('✅ Mensaje enviado correctamente. ¡Gracias por contactarnos!');
-    form.reset();
-    form.classList.remove('was-validated');
+    form.reset(); // Limpia el formulario
+    form.classList.remove('was-validated'); // deja el formulario limpio visualmente
   }
 });

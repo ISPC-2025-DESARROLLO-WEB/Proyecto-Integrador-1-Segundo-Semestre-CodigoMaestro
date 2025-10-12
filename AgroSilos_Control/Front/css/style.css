@@ -6,51 +6,94 @@
   
   }
 
+
 /* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Franja blanca con logo */
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+}
+
+.header-top img {
+  height: 120px;
+  width: 120px;
+}
+
+/* Franja verde con menú */
+.header-bottom {
+  background-color: #004d26; /* Verde oscuro */
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* ===== BOTÓN LOGIN EN NAV ===== */
+.btn-login-nav {
+  background-color: #ffffff;
+  color: #004d26;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 8px 18px;
+  transition: all 0.3s ease;
+  border: 2px solid #ffffff;
+  text-decoration: none;
+}
+
+.btn-login-nav:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 991px) {
+  .btn-login-nav {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 8px;
+  }
+}
+
+/* Responsive general */
+@media (max-width: 768px) {
   header {
-    display: flex;
     flex-direction: column;
-    width: 100%;
-  }
-
-  /* Franja blanca con logo */
-  .header-top {
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .header-top img {
-    height: 120px;
-    width: 120px;
-  }
-
-  /* Franja verde con menú */
-  .header-bottom {
-    background-color: #004d26; /* Verde oscuro */
-    display: flex;
-    justify-content: center;
-    padding: 12px 0;
   }
 
   nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
   }
+}
 
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-
-  nav ul li a:hover {
-    color: #ffcc00; /* Amarillo al pasar el mouse */
-  }
+/* Scroll suave en toda la web */
+html {
+  scroll-behavior: smooth;
+}
 /*fin del header css*/
 
  .btn-Inicio a {
@@ -536,24 +579,6 @@ section[id^="det-"] a.btn {
 
 /*fin de index css*/
 
-  /* Responsive general */
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-    }
-
-    nav ul {
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 10px;
-    }
-  }
-
-  /* Scroll suave en toda la web */
-html {
-  scroll-behavior: smooth;
-}
-
 
 /*css de productos*/
 .btn-volver {
@@ -572,4 +597,124 @@ html {
   color: #004d26;
   transform: scale(1.05);
   text-decoration: none;
+}
+
+
+/*Css de login*/
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh; 
+  padding: 2rem;
+  background-color: transparent; 
+}
+
+
+.login-container {
+  background-color: white;
+  color: #004d26;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+  border-top: 6px solid #004d26;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.login-container h2 {
+  color: #004d26;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+
+.input-group {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #004d26;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #ffcc00;
+  box-shadow: 0 0 6px #ffcc00;
+}
+
+
+button {
+  background-color: #ffcc00;
+  color: #004d26;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: bold;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #004d26;
+  color: #ffcc00;
+  box-shadow: 0 0 8px #ffcc00;
+}
+
+
+.error {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  input, button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .login-container {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
 }
