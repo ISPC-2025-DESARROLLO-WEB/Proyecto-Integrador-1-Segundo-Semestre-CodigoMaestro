@@ -24,8 +24,8 @@ class Catalogo_Productos:
         try:
             cur.execute(
                 "SELECT p.id AS id_producto, p.nombre AS producto, p.precio, p.stock, "
-                "u.nombre AS usuario, u.email AS correo "
-                "FROM productos p INNER JOIN usuarios u ON p.agregado_por = u.id "
+                "COALESCE(u.nombre, '—') AS usuario, COALESCE(u.email, '—') AS correo "
+                "FROM productos p LEFT JOIN usuarios u ON p.agregado_por = u.id "
                 "ORDER BY p.id;"
           )
             
