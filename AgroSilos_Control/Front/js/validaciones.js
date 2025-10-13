@@ -1,15 +1,13 @@
 // Validación personalizada Bootstrap + envío simulado
 document.getElementById('contactoForm').addEventListener('submit', function(e) {
-  e.preventDefault(); // Evita el envío por defect
-  
   const form = e.target;
   
   if (!form.checkValidity()) {
-    e.stopPropagation(); // Detiene la propagación del evento.
-    form.classList.add('was-validated'); //Agrega la clase de Bootstrap para mostrar errores
+    e.preventDefault(); 
+    e.stopPropagation();
+    form.classList.add('was-validated');
   } else {
-    alert('✅ Mensaje enviado correctamente. ¡Gracias por contactarnos!');
-    form.reset(); // Limpia el formulario
-    form.classList.remove('was-validated'); // deja el formulario limpio visualmente
+    // si todo está correcto, deja que FormSubmit procese el envío
+    form.classList.add('was-validated');
   }
 });
