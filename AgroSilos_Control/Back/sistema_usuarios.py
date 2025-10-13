@@ -15,7 +15,7 @@ class Sistema_Usuarios:
         conn = connect_to_mysql()
         cur = conn.cursor()
         try:
-            cur.execute("INSERT INTO usuarios (nombre, email, contraseña, rol) VALUES (%s, %s, %s, %s)",
+            cur.execute("INSERT INTO usuarios (nombre, email, contrasena, rol) VALUES (%s, %s, %s, %s)",
                         (nombre, email, contraseña, rol))
             conn.commit()
             return f"Usuario '{nombre}' registrado como {rol}."
@@ -26,15 +26,15 @@ class Sistema_Usuarios:
         finally:
             cur.close(); conn.close()
 
-    def iniciar_sesion(self, email, contraseña):
-        if not (email and contraseña):
+    def iniciar_sesion(self, email, contrasena):
+        if not (email and contrasena):
             print("No se puede iniciar sesión: campos incompletos.")
             return None
 
         conn = connect_to_mysql()
         cur = conn.cursor(dictionary=True)
         try:
-            cur.execute("SELECT * FROM usuarios WHERE email=%s AND contraseña=%s", (email, contraseña))
+            cur.execute("SELECT * FROM usuarios WHERE email=%s AND contrasena=%s", (email, contrasena))
             u = cur.fetchone()
         finally:
             cur.close(); conn.close()
@@ -42,9 +42,9 @@ class Sistema_Usuarios:
         if u:
             print(f"Inicio de sesión exitoso. Bienvenido {u['nombre']} ({u['rol']}).")
             if u["rol"] == "Administrador":
-                return Administrador(u["id"], u["nombre"], u["email"], u["contraseña"])
+                return Administrador(u["id"], u["nombre"], u["email"], u["contrasena"])
             else:
-                return Estandar(u["id"], u["nombre"], u["email"], u["contraseña"])
+                return Estandar(u["id"], u["nombre"], u["email"], u["contrasena"])
         else:
             print("ERROR: Credenciales inválidas.")
             return None
