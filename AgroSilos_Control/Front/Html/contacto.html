@@ -41,54 +41,54 @@
     <div class="col-md-7">
       <h2 class="mb-4">Envíanos un mensaje</h2>
       
-      <form action="https://formsubmit.co/agrosilos40@gmail.com" method="POST" id="contactoForm" novalidate>
+      <form id="contactoForm" action="https://formsubmit.co/6c0857d25c0024490268f27bd6d40fa9" method="POST">
         <h4 class="mb-3">Datos de la Empresa/Productor</h4>
 
         <div class="mb-3">
           <label for="empresa" class="form-label">Nombre de la Empresa/Productor</label>
-          <input type="text" class="form-control" id="empresa" placeholder="Nombre de la Empresa/Productor" minlength="2" maxlength="50" required>
+          <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Nombre de la Empresa/Productor" minlength="2" maxlength="50" required>
           <div class="invalid-feedback">Ingrese un nombre válido (mínimo 2 caracteres).</div>
         </div>
 
         <div class="mb-3">
           <label for="dni" class="form-label">DNI/CUIT</label>
-          <input type="number" class="form-control" id="dni" placeholder="Ej: 20456789" minlength="1000000" max="99999999999" required>
+          <input type="number" class="form-control" id="dni" name="dni" placeholder="Ej: 20456789" minlength="1000000" max="99999999999" required>
           <div class="invalid-feedback">Ingrese un número válido (sin puntos ni guiones).</div>
         </div>
 
         <div class="mb-3">
           <label for="email" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" id="email" placeholder="ejemplo@mail.com" required>
+          <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@mail.com" required>
           <div class="invalid-feedback">Ingrese un correo electrónico válido.</div>
         </div>
 
         <div class="mb-3">
           <label for="telefono" class="form-label">Teléfono</label>
-          <input type="tel" class="form-control" id="telefono" placeholder="Ej: 3547662065" pattern="[0-9]{6,15}" required>
+          <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ej: 3547662065" pattern="[0-9]{6,15}" required>
           <div class="invalid-feedback">Ingrese solo números (mínimo 6 dígitos).</div>
         </div>
 
         <div class="mb-3">
           <label for="codigo" class="form-label">Código Postal</label>
-          <input type="number" class="form-control" id="codigo" placeholder="Ej: 5000" min="1000" max="9999" required>
+          <input type="number" class="form-control" id="codigo" name="codigo" placeholder="Ej: 5000" min="1000" max="9999" required>
           <div class="invalid-feedback">Ingrese un código postal válido (4 cifras).</div>
         </div>
 
         <div class="mb-3">
           <label for="direccion" class="form-label">Dirección Completa</label>
-          <input type="text" class="form-control" id="direccion" minlength="5" maxlength="100" required>
+          <input type="text" class="form-control" id="direccion" name="direccion" minlength="5" maxlength="100" required>
           <div class="invalid-feedback">Ingrese una dirección válida.</div>
         </div>
 
         <div class="mb-3">
           <label for="ciudad" class="form-label">Ciudad</label>
-          <input type="text" class="form-control" id="ciudad" required>
+          <input type="text" class="form-control" id="ciudad" name="ciudad" required>
           <div class="invalid-feedback">Ingrese la ciudad.</div>
         </div>
 
         <div class="mb-3">
           <label for="provincia" class="form-label">Provincia</label>
-          <select class="form-select" id="provincia" required>
+          <select class="form-select" id="provincia" name="provincia" required>
             <option value="" hidden selected>Seleccionar Provincia</option>
             <option value="buenosaires">Buenos Aires</option>
             <option value="cordoba">Córdoba</option>
@@ -115,7 +115,7 @@
 
         <div class="mb-3">
           <label for="condicion" class="form-label">Condición Comercial</label>
-          <select class="form-select" id="condicion" required>
+          <select class="form-select" id="condicion" name="condicion" required>
             <option value="" hidden selected>Seleccionar Condición</option>
             <option value="responsableinscripto">Responsable Inscripto</option>
             <option value="monotributo">Monotributo</option>
@@ -126,17 +126,15 @@
 
         <h4 class="mb-3">Comentarios Adicionales</h4>
         <div class="mb-3">
-          <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." minlength="5" required></textarea>
+          <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." minlength="5" required></textarea>
           <div class="invalid-feedback">Por favor, escriba un mensaje.</div>
         </div>
 
         <!-- ✅ Campos ocultos de configuración -->
-        <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
         <input type="hidden" name="_subject" value="Nuevo mensaje desde el formulario de contacto - AgroSilos">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_autoresponse" value="¡Gracias por contactarte con AgroSilos! Recibimos tu mensaje y te responderemos a la brevedad.">
-        <input type="text" name="_honey" style="display:none">
 
         <button type="submit" class="btn btn-success px-4">Enviar</button>
       </form>
