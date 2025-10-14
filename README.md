@@ -34,6 +34,9 @@ Este proyecto implementa un sistema de monitoreo de humedad en silos verticales 
 📦 Framework
 -🎨 Bootstrap
 
+🌐 Sitio desplegado
+https://agrosiloscontrol.infinityfree.me/
+
 📂 Estructura del Proyecto
 AgroSilosControl/
 │── docs/             # Documentación y diagramas
