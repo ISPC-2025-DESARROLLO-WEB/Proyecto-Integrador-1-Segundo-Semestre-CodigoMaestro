@@ -691,6 +691,24 @@ button:hover {
   color: red;
   font-weight: bold;
 }
+.extra-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.extra-links a {
+  color: #004d26;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.extra-links a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
 
 /* ==== Responsive ==== */
 @media (max-width: 600px) {
@@ -718,3 +736,4 @@ button:hover {
     font-size: 1.3rem;
   }
 }
+
