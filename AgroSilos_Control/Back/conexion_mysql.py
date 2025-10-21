@@ -19,7 +19,7 @@ def connect_to_mysql():
     try:
         return mysql.connector.connect(
             user='root' ,
-            password='Dragonballz11' ,
+            password='admin' ,
             host='localhost' ,
             database='sistema_ventas' ,
             port='3306'
