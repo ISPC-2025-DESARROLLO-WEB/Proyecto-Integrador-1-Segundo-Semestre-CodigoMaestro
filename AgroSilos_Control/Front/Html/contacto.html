@@ -1,88 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="icon" type="image/png" href="../img/agrosilosfavicon.png"> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Contacto</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../img/agrosilosfavicon.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Contacto</title>
 </head>
 <body>
 <header>
   <!-- Franja blanca con logo -->
   <div class="header-top">
-    <img src="../img/Logo Empresa.png" alt="Logo Agro">
+    <img src="../img/Logo Empresa.png" alt="Logo Agro" />
   </div>
 
-   <!-- Menú -->
+  <!-- Menú -->
   <div class="header-bottom">
-  <nav>
-    <ul>
-      <li class="btn-Inicio"><a href="./index.html">Inicio</a></li>
-      <li class="btn-Inicio"><a href="./servicios.html">Productos y servicios</a></li>
-      <li class="btn-Inicio"><a href="./quienesSomos.html">Quienes Somos</a></li>
-      <li class="btn-Inicio"><a href="./contacto.html">Contacto</a></li>
-      <li class="btn-Inicio"><a href="./registro.html">Registro</a></li>
-      <!-- BOTÓN LOGIN -->
-            <li class="nav-item ms-lg-3">
-              <a href="./login.html" class="btn btn-login-nav">
-                <i class="fa-solid fa-user"></i> Iniciar sesión
-              </a>
-            </li>
-    </ul>
-  </nav>
+    <nav>
+      <ul>
+        <li class="btn-Inicio"><a href="./index.html">Inicio</a></li>
+        <li class="btn-Inicio"><a href="./servicios.html">Productos y servicios</a></li>
+        <li class="btn-Inicio"><a href="./quienesSomos.html">Quienes Somos</a></li>
+        <li class="btn-Inicio"><a href="./contacto.html">Contacto</a></li>
+        <li class="btn-Inicio"><a href="./registro.html">Registro</a></li>
+        <!-- BOTÓN LOGIN -->
+        <li class="nav-item ms-lg-3">
+          <a href="./login.html" class="btn btn-login-nav">
+            <i class="fa-solid fa-user"></i> Iniciar sesión
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
-</nav>
 </header>
 
-   <section class="container py-5">
+<section class="container py-5">
   <div class="row g-5">
-    <div class="col-md-7">
+    <!-- Izquierda: formulario -->
+    <div class="col-12 col-md-7">
       <h2 class="mb-4">Envíanos un mensaje</h2>
-      
+
       <form id="contactoForm" action="https://formsubmit.co/6c0857d25c0024490268f27bd6d40fa9" method="POST">
         <h4 class="mb-3">Datos de la Empresa/Productor</h4>
 
         <div class="mb-3">
           <label for="empresa" class="form-label">Nombre de la Empresa/Productor</label>
-          <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Nombre de la Empresa/Productor" minlength="2" maxlength="50" required>
+          <input type="text" class="form-control" id="empresa" name="empresa"
+                 placeholder="Nombre de la Empresa/Productor" minlength="2" maxlength="50" required />
           <div class="invalid-feedback">Ingrese un nombre válido (mínimo 2 caracteres).</div>
         </div>
 
         <div class="mb-3">
           <label for="dni" class="form-label">DNI/CUIT</label>
-          <input type="number" class="form-control" id="dni" name="dni" placeholder="Ej: 20456789" minlength="1000000" max="99999999999" required>
+          <input type="number" class="form-control" id="dni" name="dni"
+                 placeholder="Ej: 20456789" minlength="1000000" max="99999999999" required />
           <div class="invalid-feedback">Ingrese un número válido (sin puntos ni guiones).</div>
         </div>
 
         <div class="mb-3">
           <label for="email" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@mail.com" required>
+          <input type="email" class="form-control" id="email" name="email"
+                 placeholder="ejemplo@mail.com" required />
           <div class="invalid-feedback">Ingrese un correo electrónico válido.</div>
         </div>
 
         <div class="mb-3">
           <label for="telefono" class="form-label">Teléfono</label>
-          <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ej: 3547662065" pattern="[0-9]{6,15}" required>
-          <div class="invalid-feedback">Ingrese solo números (mínimo 6 dígitos).</div>
+          <input
+            type="tel"
+            class="form-control"
+            id="telefono"
+            name="telefono"
+            placeholder="Ej: 3547662065"
+            inputmode="numeric"
+            autocomplete="tel"
+            pattern="[0-9]{6,15}"
+            title="Ingrese solo números (6 a 15 dígitos)"
+            oninput="this.value=this.value.replace(/\D/g,'').slice(0,15)"
+            required
+          />
+          <div class="invalid-feedback">Ingrese solo números (6 a 15 dígitos).</div>
         </div>
 
         <div class="mb-3">
           <label for="codigo" class="form-label">Código Postal</label>
-          <input type="number" class="form-control" id="codigo" name="codigo" placeholder="Ej: 5000" min="1000" max="9999" required>
+          <input type="number" class="form-control" id="codigo" name="codigo"
+                 placeholder="Ej: 5000" min="1000" max="9999" required />
           <div class="invalid-feedback">Ingrese un código postal válido (4 cifras).</div>
         </div>
 
         <div class="mb-3">
           <label for="direccion" class="form-label">Dirección Completa</label>
-          <input type="text" class="form-control" id="direccion" name="direccion" minlength="5" maxlength="100" required>
+          <input type="text" class="form-control" id="direccion" name="direccion"
+                 minlength="5" maxlength="100" required />
           <div class="invalid-feedback">Ingrese una dirección válida.</div>
         </div>
 
         <div class="mb-3">
           <label for="ciudad" class="form-label">Ciudad</label>
-          <input type="text" class="form-control" id="ciudad" name="ciudad" required>
+          <input type="text" class="form-control" id="ciudad" name="ciudad" required />
           <div class="invalid-feedback">Ingrese la ciudad.</div>
         </div>
 
@@ -94,21 +111,21 @@
             <option value="cordoba">Córdoba</option>
             <option value="santafe">Santa Fe</option>
             <option value="chaco">Chaco</option>
-             <option value="chubut">Chubut</option>
-             <option value="corrientes">Corrientes</option>
-             <option value="entrerios">Entre Ríos</option>
-             <option value="formosa">Formosa</option>
-             <option value="jujuy">Jujuy</option>
-             <option value="lapampa">La Pampa</option>
-             <option value="larioja">La Rioja</option>
-             <option value="mendoza">Mendoza</option>
-             <option value="misiones">Misiones</option>
-             <option value="neuquen">Neuquén</option>
-             <option value="rionegro">Río Negro</option>
-             <option value="salta">Salta</option>
-             <option value="sanjuan">San Juan</option>
-             <option value="sanluis">San Luis</option>
-             <option value="santacruz">Santa Cruz</option>
+            <option value="chubut">Chubut</option>
+            <option value="corrientes">Corrientes</option>
+            <option value="entrerios">Entre Ríos</option>
+            <option value="formosa">Formosa</option>
+            <option value="jujuy">Jujuy</option>
+            <option value="lapampa">La Pampa</option>
+            <option value="larioja">La Rioja</option>
+            <option value="mendoza">Mendoza</option>
+            <option value="misiones">Misiones</option>
+            <option value="neuquen">Neuquén</option>
+            <option value="rionegro">Río Negro</option>
+            <option value="salta">Salta</option>
+            <option value="sanjuan">San Juan</option>
+            <option value="sanluis">San Luis</option>
+            <option value="santacruz">Santa Cruz</option>
           </select>
           <div class="invalid-feedback">Seleccione una provincia.</div>
         </div>
@@ -126,22 +143,24 @@
 
         <h4 class="mb-3">Comentarios Adicionales</h4>
         <div class="mb-3">
-          <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." minlength="5" required></textarea>
+          <textarea class="form-control" id="mensaje" name="mensaje"
+                    rows="5" placeholder="Escribe tu mensaje aquí..." minlength="5" required></textarea>
           <div class="invalid-feedback">Por favor, escriba un mensaje.</div>
         </div>
 
-        <!-- ✅ Campos ocultos de configuración -->
-        <input type="hidden" name="_subject" value="Nuevo mensaje desde el formulario de contacto - AgroSilos">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_autoresponse" value="¡Gracias por contactarte con AgroSilos! Recibimos tu mensaje y te responderemos a la brevedad.">
+        <!-- Campos ocultos de configuración FormSubmit -->
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde el formulario de contacto - AgroSilos" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_autoresponse"
+               value="¡Gracias por contactarte con AgroSilos! Recibimos tu mensaje y te responderemos a la brevedad." />
 
         <button type="submit" class="btn btn-success px-4">Enviar</button>
       </form>
     </div>
 
-    <!-- Datos de contacto -->
-    <div class="col-md-5">
+    <!-- Derecha: Datos de contacto -->
+    <div class="col-12 col-md-5">
       <h2 class="mb-4">Nuestros datos</h2>
       <ul class="list-unstyled">
         <li><strong>📍 Dirección:</strong> Av.Yrigoyen 1073, Córdoba, Argentina</li>
@@ -154,62 +173,63 @@
       <a href="#" class="btn btn-outline-success btn-sm me-2">Instagram</a>
       <a href="#" class="btn btn-outline-success btn-sm">LinkedIn</a>
     </div>
-  </div>
+  </div><!-- /row -->
 </section>
 
 <!-- Mapa -->
 <section class="container-fluid p-0">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.924993389234!2d-58.381559585052065!3d-34.60368446500327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccab1e90a0b0b%3A0x2f4d8e2d3bfa!2sBuenos%20Aires!5e0!3m2!1ses!2sar!4v1614034443530!5m2!1ses!2sar" 
-    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
-  </iframe>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.924993389234!2d-58.381559585052065!3d-34.60368446500327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccab1e90a0b0b%3A0x2f4d8e2d3bfa!2sBuenos%20Aires!5e0!3m2!1ses!2sar!4v1614034443530!5m2!1ses!2sar"
+    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </section>
 
 <!-- Footer -->
- <footer class="footer-container">
-    <div class="footer-main-content">
-        <div class="footer-column">
-            <h4><img src="../img/Logo Empresa.png" alt="Logo AgroSilos" style="height: 120px; width: 120px;"></h4>
-            <p>
-                Nuestra empresa se posiciona como el socio tecnológico ideal para la industria agrícola, ofreciendo soluciones que digitalizan y modernizan la gestión del almacenamiento de granos.
-            </p>
-        </div>
-
-        <div class="footer-column">
-            <h4>INSTITUCIONAL</h4>
-            <a href="index.html">¿Quiénes Somos?</a>
-        </div>
-
-        <div class="footer-column">
-            <h4>DESTACADOS</h4>
-            <a href="servicios.html">Productos</a>
-        </div>
-
-        <div class="footer-column">
-            <h4>CONTACTO</h4>
-            <p>
-                Av Yrigoyen 1073, Córdoba, Argentina<br>
-                +54 3547662065<br>
-                <a href="mailto:agrosilos40@gmail.com">agrosilos40@gmail.com</a>
-            </p>
-        </div>
+<footer class="footer-container">
+  <div class="footer-main-content">
+    <div class="footer-column">
+      <h4><img src="../img/Logo Empresa.png" alt="Logo AgroSilos" style="height: 120px; width: 120px;" /></h4>
+      <p>
+        Nuestra empresa se posiciona como el socio tecnológico ideal para la industria agrícola, ofreciendo soluciones que
+        digitalizan y modernizan la gestión del almacenamiento de granos.
+      </p>
     </div>
 
-    <div class="footer-bottom">
-        <div class="footer-copyright">
-            <p>&copy; Copyright Grupo AgroSilos. Todos los derechos reservados</p>
-            <p>Av Yrigoyen 1073, Córdoba, Argentina | +54 3547662065</p>
-            <p>Desarrollado por Grupo Maestro</p>
-        </div>
-
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
+    <div class="footer-column">
+      <h4>INSTITUCIONAL</h4>
+      <a href="index.html">¿Quiénes Somos?</a>
     </div>
+
+    <div class="footer-column">
+      <h4>DESTACADOS</h4>
+      <a href="servicios.html">Productos</a>
+    </div>
+
+    <div class="footer-column">
+      <h4>CONTACTO</h4>
+      <p>
+        Av Yrigoyen 1073, Córdoba, Argentina<br />
+        +54 3547662065<br />
+        <a href="mailto:agrosilos40@gmail.com">agrosilos40@gmail.com</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-copyright">
+      <p>&copy; Copyright Grupo AgroSilos. Todos los derechos reservados</p>
+      <p>Av Yrigoyen 1073, Córdoba, Argentina | +54 3547662065</p>
+      <p>Desarrollado por Grupo Maestro</p>
+    </div>
+
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
 </footer>
- <script src="../js/validaciones.js"></script>
+
+<script src="../js/validaciones.js"></script>
 </body>
 </html>
