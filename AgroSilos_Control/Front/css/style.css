@@ -33,7 +33,7 @@ header {
   background-color: #004d26; /* Verde oscuro */
   display: flex;
   justify-content: center;
-  padding: 12px 0;
+  padding: 20px 0px 0px 0px;
 }
 
 nav ul {
@@ -47,6 +47,10 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
+}
+
+a:hover {
+  color: #ffcc00; 
 }
 
 /* ===== BOTÓN LOGIN EN NAV ===== */
@@ -690,6 +694,24 @@ button:hover {
   margin-top: 10px;
   color: red;
   font-weight: bold;
+}
+.extra-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.extra-links a {
+  color: #004d26;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.extra-links a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
 }
 
 /* ==== Responsive ==== */
